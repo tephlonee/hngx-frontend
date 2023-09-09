@@ -19,6 +19,21 @@ body{
     
 }
 
+a{
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container{
+    display: flex;
+    gap: 3%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.858);
+}
+
 img{
     display: inline-block;
     width: 300px;
@@ -27,23 +42,19 @@ img{
 }
 
 .img-container{
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 p{ 
-    width: 300px;
-    white-space: nowrap;
-    margin-top: 1rem;
-   
-}
-
-.container{
     display: flex;
     flex-direction: column;
     gap: 3%;
-    padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.858);
-    border-radius: 20px;
+    text-align: center;
+    width: 300px;
+    margin-top: 1rem;
+   
 }
 
 .label{
@@ -52,4 +63,33 @@ p{
 
 .label-value{
     float: right;
+}
+
+span[data-testid='slackUserName']{
+    font-weight: bold;
+    font-size: 1.5rem;
+    color:green
+}
+
+span[data-testid='currentUTCTime']{
+    color: red;
+    font: 1.5rem bold;
+
+}
+
+a[data-testid='githubURL']{
+    color: brown;
+}
+
+
+
+
+@media screen and (max-width: 660px) {
+    body{
+        overflow: scroll;
+    }
+
+    .container{
+        flex-direction: column;
+    }
 }
